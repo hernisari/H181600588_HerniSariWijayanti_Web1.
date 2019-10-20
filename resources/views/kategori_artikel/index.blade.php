@@ -29,7 +29,7 @@
 
                  
                  <td>
-                    <a href="{!!route('kategori_Artikel.show',[$item->id])!!}" class="btn-sm btn-primary">Lihat</a>
+                    <a href="{!!route('kategori_artikel.show',[$item->id])!!}" class="btn-sm btn-primary">Lihat</a>
                  </td>
 
                  </tr>

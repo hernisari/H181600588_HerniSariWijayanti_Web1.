@@ -8,24 +8,27 @@ class ArtikelController extends Controller
 {
     public function index(){
         //eloquent => ORM (Object Relational Mapping)
-        $listArtikel=Artikel::all(); //select * from artikel
+        $listartikel=artikel::all(); //select * from artikel
         
         //blade
-        return view('Artikel.index', compact ('listArtikel'));
+        return view('artikel.index', compact ('listartikel'));
     }
 
     public  function show ($id){
         //$artikel=KategoriArtikel::where('id,$id)->first();
-        $Artikel=Artikel::find($id);
+        $artikel=artikel::find($id);
 
-        return view('Artikel.show',compact('Artikel'));
+        return view('artikel.show',compact('artikel'));
+    }
+    public function create(){
+        return view('artikel.create');
     }
 
     public function store(Request $request){
         $input=$request->all();
         
-        Artikel::create($input);
+        artikel::create($input);
         
-        return redirect(route('Artikel.index'));
+        return redirect(route('artikel.index'));
     }   
 }

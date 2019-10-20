@@ -42,7 +42,7 @@ Route::get('/pengumuman/create','PengumumanController@create')->name('pengumuman
 Route::post('/pengumuman','PengumumanController@store')->name('pengumuman.store');
 Route::get('/pengumuman/{id}','PengumumanController@show')->name('pengumuman.show');
 
-Route::get('/kategori_artikel','KategoriArtikelController@Index')->name ('kategori_artikel.index');
+Route::get('/kategori_artikel','kategoriartikelController@Index')->name ('kategori_artikel.index');
 Route::get('/kategori_artikel/create','KategoriArtikelController@create')->name('kategori_artikel.create');
 Route::post('/kategori_artikel','KategoriArtikelController@store')->name('kategori_artikel.store');
 Route::get('/kategori_artikel/{id}','KategoriArtikelController@show')->name('kategori_artikel.show');

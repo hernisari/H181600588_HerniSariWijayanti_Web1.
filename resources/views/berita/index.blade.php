@@ -13,19 +13,24 @@
                 <table border="1">
                 <tr>
                 <td>ID</td>
-                <td>Nama</td>
-                <td>Users Id</td>
-                <td>Create</td>
-                <td>Aksi</td>
+                <td>judul</td>
+                <td>isi</td>
+                <td>user_id</td>
+                <td>created_at</td>
+                <td>updated_at</td>
+                <td>kategori_berita_id</td>
                 </tr>
 
                  @foreach($listBerita as $item)
 
                  <tr>
                  <td>{!!$item->id!!}</td>
-                 <td>{!!$item->nama!!}</td>
-                 <td>{!!$item->users_id!!}</td>
-                 <td>{!!$item->created_at!!}</td>
+                 <td>{!!$item->judul!!}</td>
+                 <td>{!!$item->isi!!}</td>
+                 <td>{!!$item->user_id!!}</td>
+                 <td>{!!$item->created_at->format('d/m/Y H:i')!!}</td>
+                 <td>{!!$item->updated_at->format('d/m/Y H:i')!!}</td>
+                 <td>{!!$item->kategori_berita_id!!}</td>
 
                  
                  <td>

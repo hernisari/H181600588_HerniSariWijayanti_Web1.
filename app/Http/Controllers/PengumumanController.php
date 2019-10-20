@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pengumuman;
+use App\KategoriPengumuman;
 class PengumumanController extends Controller
 {
     public function index(){
@@ -12,12 +13,14 @@ class PengumumanController extends Controller
         return view('pengumuman.index' ,compact('listPengumuman'));
     }
     public function show($id){
-        $Pengumuman=Pengumuman::find($id);
-        return view('pengumuman.show', compact('Pengumuman'));
+        $pengumuman=Pengumuman::find($id);
+        return view('pengumuman.show', compact('pengumuman'));
     }
-
     public function create(){
-        return view('pengumuman.create');
+       
+        $kategoriPengumuman=KategoriPengumuman::pluck('nama','id');
+        
+        return view('pengumuman.create', compact('kategoriPengumuman'));
     }
     public function store(Request $request){
         $input=$request->all();

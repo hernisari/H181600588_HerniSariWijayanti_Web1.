@@ -17,9 +17,9 @@ class KategoriArtikelController extends Controller
 
     public  function show ($id){
         //$kategoriArtikel=KategoriArtikel::where('id,$id)->first();
-        $kategoriArtikel=KategoriArtikel::find($id);
+        $kategoriartikel=kategoriartikel::find($id);
 
-        return view('kategori_Artikel.show',compact('kategoriArtikel'));
+        return view('kategori_artikel.show',compact('kategoriartikel'));
     }
 
     public function create(){
@@ -29,9 +29,9 @@ class KategoriArtikelController extends Controller
     public function store(Request $request){
         $input=$request->all();
         
-        KategoriArtikel::create($input);
+        kategoriartikel::create($input);
         
-        return redirect(route('kategori_Artikel.index'));
+        return redirect(route('kategori_artikel.index'));
     }   
         
 

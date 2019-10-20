@@ -2,12 +2,40 @@
 
 
                         <div class="form-group row">
-                            <label for="nama" class="col-md-4 col-form-label text-md-right">{{ __('nama') }}</label>
+                            <label for="judul" class="col-md-4 col-form-label text-md-right">{{ __('judul') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nama" type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" required autocomplete="nama" autofocus>
+                                <input id="judul" type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" value="{{ old('judul') }}" required autocomplete="judul" autofocus>
 
-                                @error('nama')
+                                @error('judul')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="isi" class="col-md-4 col-form-label text-md-right">{{ __('isi') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="isi" type="text" class="form-control @error('isi') is-invalid @enderror" name="isi" value="{{ old('isi') }}" required autofocus>
+
+                                @error('isi')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="kategori_berita_id" class="col-md-4 col-form-label text-md-right">{{ __('kategori_berita_id') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="kategori_berita_id" type="text" class="form-control @error('kategori_berita_id') is-invalid @enderror" name="kategori_berita_id" value="{{ old('kategori_berita_id') }}" required autofocus>
+
+                                @error('kategori_berita_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

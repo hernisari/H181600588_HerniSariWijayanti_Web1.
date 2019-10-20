@@ -13,8 +13,13 @@
             </div>
             
             <div class="form-group row">
-            <label class="col-md-4 col-form-label text-md-right">Nama</label>
-            <label class="col-md-6 col-form-label text-md-left">{!!$artikel->nama!!} </label>
+            <label class="col-md-4 col-form-label text-md-right">Judul</label>
+            <label class="col-md-6 col-form-label text-md-left">{!!$artikel->judul!!} </label>
+            </div>
+
+            <div class="form-group row">
+            <label class="col-md-4 col-form-label text-md-right">isi</label>
+            <label class="col-md-6 col-form-label text-md-left">{!!$artikel->isi!!} </label>
             </div>
 
             <div class="form-group row">
@@ -23,7 +28,7 @@
             </div>
 
             <div class="form-group row">
-            <label class="col-md-4 col-form-label text-md-right">Create</label>
+            <label class="col-md-4 col-form-label text-md-right">created</label>
             <label class="col-md-6 col-form-label text-md-left">{!!$artikel->created_at->format('d/m/Y H:i') !!} </label>
             </div>
 
@@ -31,6 +36,12 @@
             <label class="col-md-4 col-form-label text-md-right">Update</label>
             <label class="col-md-6 col-form-label text-md-left">{!!$artikel->updated_at->format('d/m/Y H:i') !!} </label>
             </div>
+
+            <div class="form-group row">
+            <label class="col-md-4 col-form-label text-md-right">Kategori artikel id</label>
+            <label class="col-md-6 col-form-label text-md-left">{!!$artikel->kategori_artikel_id!!} </label>
+            </div>
+
 
             <div class="form-group row mb-0">
             <div class="col-md-6 offset-md-4">
